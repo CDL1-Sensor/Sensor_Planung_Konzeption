@@ -1,4 +1,4 @@
-# Sensor_Planung_Konzeption
+# Planung Konzeption
 Abgabetermin: 16. März 2023  
 Dieses Dokument dient als Planunung und Konzeption unserer cdl1/4Da Sensor based Activity Recognition Challenge.
 
