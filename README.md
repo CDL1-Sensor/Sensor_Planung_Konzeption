@@ -27,23 +27,24 @@ Im Folgenden präsentieren wir eine Tabelle mit verschiedenen Metriken, anhand d
 | Genügend                    | 0.5      | 0.5       | 0.5    | 0.5      |
 | Ungenügend                  | 0.2      | 0.2       | 0.2    | 0.2      |
 
-Das Dömänenwissen über die Metriken behandeln wir [hier](LINK):
+Das Dömänenwissen über die Metriken behandeln wir [hier](https://github.com/CDL1-Sensor/Sensor_Domaenverstaendnis) im Abschnitt Klassifikationsmetriken.
 
 Ein weiterer Aspekt ist, dass die Klassifizierung der Bewegungsprofile sowohl für Android- als auch für Apple-Geräte funktionieren sollte, die mit dem Sensorlogger die Messungen durchführen.
 
 ## Scope: Was genau im Projekt erreicht werden soll / was nicht
-Was wollen wir erreichen?
-- Tag aufzeichnen in einem Programm und Daten analysieren, wann man um welche Zeit welches Bewegungsprofil hatte
-- Statstik vom Tag aufgrund von 6 Bewegungsprofilen
-- Use Case - Tagesabblauf analysieren und schauen, ob die Person sich bewegt.
-- Webapp 
 
-Was nicht?
-- Echtzeit Messungen und Klassifikationen
+Unser Ziel ist es, eine umfassende Analyse des Tagesablaufs oder Tagesabschnitt durchzuführen, indem wir ein Programm zur Aufzeichnung der Bewegungsprofilen (Zb. SensorLogger) verwenden und die aufgenommenen Daten anschliessend im nachinein auswerten.   
+Damit können wir feststellen, wann welches Bewegungsprofil zur welcher Zeit aufgetreten ist.   
+Hierzu werden anschliessend zu den sechs Bewegungsprofilen eine Statistik der aufgenommenen Person durchgeführt.   
+Die Ergebnisse werden dabei in einer Applikation anschaulich dargestellt. 
 
-Frage: 
-- Wie speichern wir die Daten?
-- Welches Modell verwenden wir in der Webapp? 
+Ein wichtiger Use-Case besteht darin, den Tagesablauf der Person genauer zu analysieren und festzustellen, ob sich diese ausreichend bewegt. Hierbei können wir durch die Auswertung der Bewegungsprofile wertvolle Erkenntnisse gewinnen. 
+
+Dabei sind folgende Punkte noch offen die wir im Laufe der Bearbeitung der Challenge klären müssen.
+- Wie speichern wir die aufgenommenen Tagesabläufe?
+- Welches Modell verwenden wir für unsere Applikation? 
+
+Was nicht in unserer Challenge erreicht werden sollte ist die Klassifikation von Bewegungsprofilen in Echtzeit mittels einer selbst programmierten App. 
 
 ## Planung: Was es für Milestones gibt und wann diese etwa erreicht sein sollen 
 Milestones 1: Planung und Konzeption bis 16.03.2023
