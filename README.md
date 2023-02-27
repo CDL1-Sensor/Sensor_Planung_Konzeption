@@ -2,7 +2,7 @@
 Abgabetermin: 16. März 2023  
 Dieses Dokument dient als Planunung und Konzeption unserer cdl1/4Da Sensor based Activity Recognition Challenge.
 
-## Ziel: welche Bewegungsprofile erkannt werden sollen und mit welcher erhofften Genauigkeit
+## Ziel: welche Bewegungsprofile erkannt werden sollen und mit welcher erhofften Genauigkeit (
 Bewegungsprofile
 - 6 Bewegungsprofile auflisten 
 
