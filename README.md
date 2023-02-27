@@ -47,6 +47,8 @@ Was nicht in unserer Challenge erreicht werden sollte ist die Klassifikation von
 
 ## Planung: Was es für Milestones gibt und wann diese etwa erreicht sein sollen 
 
+Unsere Milestone stellen wir in einer Tabelle Deadlines übersichtlich dar. 
+
 | Milestone | Was?                                              | Deadline   |
 |-----------|---------------------------------------------------|------------|
 | 1         | Planung und Konzeption                            | 16.03.2023 |
