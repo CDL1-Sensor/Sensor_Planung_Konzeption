@@ -33,10 +33,9 @@ Ein weiterer Aspekt ist, dass die Klassifizierung der Bewegungsprofile sowohl f�
 
 ## Scope: Was genau im Projekt erreicht werden soll / was nicht
 
-Unser Ziel ist es, eine umfassende Analyse des Tagesablaufs oder Tagesabschnitt durchzuführen, indem wir ein Programm zur Aufzeichnung der Bewegungsprofilen (Zb. SensorLogger) verwenden und die aufgenommenen Daten anschliessend im nachinein auswerten.   
+Unser Ziel ist es, eine umfassende Analyse des Tagesablaufs oder Tagesabschnitt durchzuführen, indem wir ein Programm zur Aufzeichnung der Bewegungsprofilen (Zb. SensorLogger) verwenden und die aufgenommenen Daten anschliessend im **nachinein** in der eigenen programmierten Applikation auswerten.   
 Damit können wir feststellen, wann welches Bewegungsprofil zur welcher Zeit aufgetreten ist.   
 Hierzu werden anschliessend zu den sechs Bewegungsprofilen eine Statistik der aufgenommenen Person durchgeführt.   
-Die Ergebnisse werden dabei in einer Applikation anschaulich dargestellt. 
 
 Ein wichtiger Use-Case besteht darin, den Tagesablauf der Person genauer zu analysieren und festzustellen, ob sich diese ausreichend bewegt. Hierbei können wir durch die Auswertung der Bewegungsprofile wertvolle Erkenntnisse gewinnen. 
 
@@ -47,37 +46,48 @@ Dabei sind folgende Punkte noch offen die wir im Laufe der Bearbeitung der Chall
 Was nicht in unserer Challenge erreicht werden sollte ist die Klassifikation von Bewegungsprofilen in Echtzeit mittels einer selbst programmierten App. 
 
 ## Planung: Was es für Milestones gibt und wann diese etwa erreicht sein sollen 
-Milestones 1: Planung und Konzeption bis 16.03.2023
-Milestone 2: Datenbeschaffung beenden bis 07.03.2023 (in Absprache mit anderen Teams)
-Milestone 3: Data Wrangling und EDA abschliessen bis 30.04.2023 
-Milestone 4: Implementierung von ML Modellen bis 16.06.2023 
-Milestone 5: Webapp Integration bis 16.06.2023
 
-Milestone 6: Dokumentation parallel zu allen Milestones machen bis 16.06.2023
-
-Deadline fuer alle Abgaben: **16.06.2023** 
+| Milestone | Was?                                              | Deadline   |
+|-----------|---------------------------------------------------|------------|
+| 1         | Planung und Konzeption                            | 16.03.2023 |
+| 2         | Datenbeschaffung beenden (in Absprache)           | 07.03.2023 |
+| 3         | Data Wrangling und EDA abschließen                | 30.04.2023 |
+| 4         | Implementierung von ML Modellen                   | 16.06.2023 |
+| 5         | Webapp Integration                                | 16.06.2023 |
+| 6         | Dokumentation parallel zu allen Milestones machen | 16.06.2023 |
+| Deadline  | Abgabe                                            | 16.06.2023 |
 
 ## Konzept: Wie das Vorgehen für die Datensicherung und Beschriftung, die Datenverarbeitung, sowie die Modellierung ist
 
-Datensicherung und Beschriftung 
-(Beschriftung = Aktivitaetyp, Personennamen, Devicetyp -> bsp: Nummerierung Treppenlaufen, Lea, Huawei)
-Dateisicherung -> 01_Huaweii.json
-Kurze Messungen unter 5 Minuten. 
+Die Datensammlung geschieht Gruppen übergreifend, um möglichst viele Bewegungsprofile sammeln zu können. 
+Die Datensicherung geschieht durch den Export an Etienne Roulet's OneDrive. 
+Die Beschriftung der Daten wird sichergestellt, indem für jedes Bewegungsprofil von jeder Person eine Orderstruktur erstellt wurde.
+Die Rohdaten werden dabei in einem json Format von Sensorlogger exportiert, dabei wird der Dateiname nummeriert und Gerätetyp beschriftet.
 
-Datensicherung auf OneDrive Etienne -> Gruppenuebergreifend hochladen 
+Die Ordnerstruktur sieht wie folgt aus.
 
-Datenverarbeitung: Auswahl von Sensoren -> Einlesen von Bewegungsprofilen -> DataFrames (Pandas, polars) -> Plots fuer jedes Bewegungsprofil pro Person und Aktivitaet anschauen -> gegebenfalls vordere Zeit und hintere Zeit weg schneiden -> Daten in passendes Format konvertieren fuer ML (Tensor) -> 
-Modelierung: Modelle erstellen -> Modell trainieren -> Modelle Auswerten -> Modelle deployen 
+├── Messungen  
+│   ├── Aktivitätstyp  
+│   │   ├── Vorname_Nachname  
+│   │   │  ├── XX_DeviceTyp.json  
 
-Modelle die in Frage kommen ohne DL: Clustering Algorithmen 
-Modelle die in Frage kommen ohne DL: CNN/RNN?
----> ChatGPT konsultieren - machen uns noch Gedanken 
+Bei der Datenverabeitung entscheiden wir aufgrund vom Domänenwissen, ([hier](https://github.com/CDL1-Sensor/Sensor_Domaenverstaendnis)), welche Sensoren im Grunde genommen für unsere Klassifikationsaufgabe in Frage kommen. 
+Anschliessend erfolgt das einlesen von den json Datei in ein geeignetes DataFrame (Pandas oder Polars) 
+Nachdem wir die Bewegungsprofilen sowie Labeling in ein passendes DataFrame überführen konnten erfolgt die Explorative Datenanalyse und Data Wrangling.
+Dabei werden diverse Bewegungsprofile mit dem entsprechenden Sensor gegenüber der Zeit geplottet (Matplotlib oder Seaborn). 
+Ein Data Wrangling part könnte sein, das Schneiden von Messungen der ersten 10 Sekunden und der letzten 10 Sekunden. 
+Nach dem die Daten aufbereitet und exploriert wurde, erfolgt die Trennung der Daten in Trainingsdaten und Validierung-/Testdaten. 
+Anschliessend die Auswahl an Machine Learning sowie Deep Learning Modellen und trainieren der Modelle. 
+Um zu schauen, wie gut unsere Modelle performen nutzen wir die Validierung-/Testdaten und werten aus und vergleichen Unterschiedliche Modelle
+untereinander. Als aller letzter Schritt werden die Daten in der Applikation integriert und getestet.  
 
-Auswertung von Modellen: 
-Accuracy, Recall, Precision, F1-Score, (ROC)
+Zum jetzigen Zeitpunkt stellen sich nun die folgenden Fragen:
+- Welche Modelle kommen in Frage ohne DL? (Clustering Algorithmen, Decision Trees)
+- Welche Modelle kommen mit DL in Frage? (CNN, RNN)
 
 ## Output: In welcher Form die Erkenntnisse präsentiert werden sollen 
-- Frontend Applikation -> Zeigen wie das funktioniert und genutzt wird. Praesentation der Ergebniss 
-- Pitch 
+
+Die gewonnen Erkentnissen werden in Form von einem Pitch präsentiert. Dabei wird unsere erstellte Frontend Applikation präsentiert und gezeigt, wie diese funktioniert und genutzt werden kann. 
+
 
 
