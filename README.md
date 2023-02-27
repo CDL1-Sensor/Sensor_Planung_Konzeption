@@ -1,14 +1,37 @@
 # Planung Konzeption
-Abgabetermin: 16. März 2023  
-Dieses Dokument dient als Planunung und Konzeption unserer cdl1/4Da Sensor based Activity Recognition Challenge.
+Abgabetermin: 16. März 2023   
+Dieses Dokument dient als Planunung und Konzeption unserer cdl1/4Da Sensor based Activity Recognition Challenge.  
+Dabei beantworten wir die vorgegebenen Leitfragen im [Spaces](https://spaces.technik.fhnw.ch/spaces/sensor-based-activity-recognition).
 
-## Ziel: welche Bewegungsprofile erkannt werden sollen und mit welcher erhofften Genauigkeit (
-Bewegungsprofile
-- 6 Bewegungsprofile auflisten 
+## Ziel: welche Bewegungsprofile erkannt werden sollen und mit welcher erhofften Genauigkeit  
 
-Genauigkeit
-- Sowohl fuer schlechte und gute Handys erkennen 
-- Sowohl Android und Iphone koenne zu klassifizieren
+Um ein möglichst detailliertes Bild der Bewegungsprofile zu erhalten, planen wir, sechs Bewegungsprofilen zu sammeln.
+Die Sammlung der Bewegungsprofilen geschieht Gruppen übergreifend und mit Hilfe der SensorLogger App. 
+
+Nachfolgend werden die sechs Bewegsungsprofilen aufgelistet. 
+
+- Laufen
+- Rennen
+- Treppenlaufen
+- Velofahren
+- Stehen
+- Sitzen
+
+Das Ziel wird es sein, jedes der sechs Bewegungsprofilen mit dem besten Modell klassifizieiren zu können. 
+Dabei erhoffen wir eine gute bis sehr gute Genaugikeit. 
+
+Nachfolgend listen wir eine Tabelle mit diversen Metriken, ab dem der Wert für uns als Gruppe als Sehr gut, gut, genügend oder ungenügend beurteilt wurde.
+
+| Gruppenbeurteilung / Metrik | Accuracy | Precision | Recall | F1-Score |
+|-----------------------------|----------|-----------|--------|----------|
+| Sehr gut                    | 0.9      | 0.9       | 0.9    | 0.9      |
+| Gut                         | 0.7      | 0.7       | 0.7    | 0.7      |
+| Genügend                    | 0.5      | 0.5       | 0.5    | 0.5      |
+| Ungenügend                  | 0.2      | 0.2       | 0.2    | 0.2      |
+
+Das Dömänenwissen über die Metriken behandeln wir [hier](LINK):
+
+Ein weitere Punkt ist, das die Klassifikation der Bewegungsprofilen sowohl für Android und Apple Geräten funktionieren sollten, die die Messungen mit dem Sensorlogger betätigen. 
 
 ## Scope: Was genau im Projekt erreicht werden soll / was nicht
 Was wollen wir erreichen?
