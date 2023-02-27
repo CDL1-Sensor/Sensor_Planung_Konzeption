@@ -5,8 +5,7 @@ Dabei beantworten wir die vorgegebenen Leitfragen im [Spaces](https://spaces.tec
 
 ## Ziel: welche Bewegungsprofile erkannt werden sollen und mit welcher erhofften Genauigkeit  
 
-Um ein möglichst detailliertes Bild der Bewegungsprofile zu erhalten, planen wir, sechs Bewegungsprofilen zu sammeln.
-Die Sammlung der Bewegungsprofilen geschieht Gruppen übergreifend und mit Hilfe der SensorLogger App. 
+Um eine umfassende Datenerfassung der Bewegungsprofile zu gewährleisten, beabsichtigen wir, insgesamt sechs Bewegungsprofile zu erheben. Die Datensammlung wird gruppenübergreifend mithilfe der SensorLogger-App erfolgen.
 
 Nachfolgend werden die sechs Bewegsungsprofilen aufgelistet. 
 
@@ -17,10 +16,9 @@ Nachfolgend werden die sechs Bewegsungsprofilen aufgelistet.
 - Stehen
 - Sitzen
 
-Das Ziel wird es sein, jedes der sechs Bewegungsprofilen mit dem besten Modell klassifizieiren zu können. 
-Dabei erhoffen wir eine gute bis sehr gute Genaugikeit. 
+Unser Ziel ist es, für jedes der sechs Bewegungsprofile eine Klassifizierung mit dem bestmöglichen Modell zu erreichen und dabei eine hohe Genauigkeit anzustreben, die im Bereich von gut bis sehr gut liegen sollte.
 
-Nachfolgend listen wir eine Tabelle mit diversen Metriken, ab dem der Wert für uns als Gruppe als Sehr gut, gut, genügend oder ungenügend beurteilt wurde.
+Im Folgenden präsentieren wir eine Tabelle mit verschiedenen Metriken, anhand derer wir als Gruppe die Ergebnisse als "sehr gut", "gut", "genügend" oder "ungenügend" bewerten können.
 
 | Gruppenbeurteilung / Metrik | Accuracy | Precision | Recall | F1-Score |
 |-----------------------------|----------|-----------|--------|----------|
@@ -31,7 +29,7 @@ Nachfolgend listen wir eine Tabelle mit diversen Metriken, ab dem der Wert für 
 
 Das Dömänenwissen über die Metriken behandeln wir [hier](LINK):
 
-Ein weitere Punkt ist, das die Klassifikation der Bewegungsprofilen sowohl für Android und Apple Geräten funktionieren sollten, die die Messungen mit dem Sensorlogger betätigen. 
+Ein weiterer Aspekt ist, dass die Klassifizierung der Bewegungsprofile sowohl für Android- als auch für Apple-Geräte funktionieren sollte, die mit dem Sensorlogger die Messungen durchführen.
 
 ## Scope: Was genau im Projekt erreicht werden soll / was nicht
 Was wollen wir erreichen?
