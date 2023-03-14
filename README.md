@@ -1,7 +1,7 @@
 # Planung Konzeption
 Abgabetermin: 16. März 2023   
 Dieses Dokument dient als Planunung und Konzeption unserer cdl1/4Da Sensor based Activity Recognition Challenge.  
-Dabei beantworten wir die vorgegebenen Leitfragen im [Spaces](https://spaces.technik.fhnw.ch/spaces/sensor-based-activity-recognition).
+Dabei beantworten wir die vorgegebenen Leitfragen im [Spaces](https://spaces.technik.fhnw.ch/spaces/sensor-based-activity-recognition).   
 Diese Challenge wird dabei von folgenden Studierenden bearbeitet: Lea Bütler, Manjavy Kirupa, Etienne Roulet und Si Ben Tran
 
 ## Ziel: welche Bewegungsprofile erkannt werden sollen und mit welcher erhofften Genauigkeit  
